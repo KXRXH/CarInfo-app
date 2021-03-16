@@ -1,0 +1,16 @@
+{
+  "name": "CarInfo",
+  "version": "2.0",
+  "author": "KXRXH",
+  "description": "Live info about your car",
+  "tags": [
+    "ui",
+	"statistics",
+	"speed",
+  "gear",
+  "avgSpeed",
+  "RPM"
+  ],
+  "country": "Russia",
+  "url": null
+}
