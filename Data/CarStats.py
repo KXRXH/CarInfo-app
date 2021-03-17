@@ -7,8 +7,9 @@ def getCarStats():
     curr_Speed = ac.getCarState(0, acsys.CS.SpeedKMH)
     curr_Gear = ac.getCarState(0, acsys.CS.Gear)
     curr_boost = ac.getCarState(0, acsys.CS.TurboBoost)
+    curr_dts = ac.getCarState(0, acsys.CS.DriveTrainSpeed)
 
-    return [curr_Speed, curr_RPM, curr_Gear, curr_boost]
+    return [curr_Speed, curr_RPM, curr_Gear, curr_boost, curr_dts]
 
 
 def carStatsOutput(boost_label, gear_label, rpm_label, speed_label, maxRPM, scaleTurbo=1, scaleSpeed=1):
@@ -35,6 +36,7 @@ def carStatsOutput(boost_label, gear_label, rpm_label, speed_label, maxRPM, scal
     elif maxRPM - 500 > curr_RPM > maxRPM - 1250:
         ac.setFontColor(rpm_label, 1, 0.9, 0, 1)
         ac.setFontColor(gear_label, 1, 1, 1, 1)
+
     else:
         ac.setFontColor(rpm_label, 1, 1, 1, 1)
         ac.setFontColor(gear_label, 1, 1, 1, 1)
